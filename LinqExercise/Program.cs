@@ -50,7 +50,7 @@ namespace LinqExercise
 
             Console.WriteLine("Changing the value of index four to 21: ");
             numbers.SetValue(21, 4);
-            foreach(var item in orderedByDesc)
+            foreach(var item in numbers)
             {
                 Console.WriteLine(item);
             }
@@ -61,9 +61,9 @@ namespace LinqExercise
             List<Employee> employees = CreateEmployees();
 
             //TODO: Print all the employees' FullName properties to the console only if their FirstName starts with a C OR an S and order this in ascending order by FirstName.
-            employees.Where(x => x.FirstName.StartsWith 'C' ||x.FirstName ('S'))
+            employees.Where(x => x.FirstName.StartsWith('C') ||x.FirstName.StartsWith('S'))
                 .OrderBy(x => x.FirstName)
-                .ToList();
+                .ToList()
             .ForEach(x  => Console.WriteLine(x.FullName));
 
             //TODO: Print all the employees' FullName and Age who are over the age 26 to the console and order this by Age first and then by FirstName in the same result.
@@ -81,7 +81,7 @@ namespace LinqExercise
             Console.WriteLine();
 
             //TODO: Now print the Average of the employees' YearsOfExperience if their YOE is less than or equal to 10 AND Age is greater than 35.
-             Above TODO
+             
             //TODO: Add an employee to the end of the list without using employees.Add()
             Employee newEmployee = new Employee();
             newEmployee.FirstName = "Alen";
